@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>TODO-List</title>
+	<link rel="stylesheet" type="text/css" href="bin/css/index.css">
+	<link rel="shortcut icon" href="bin/images/list.png" type="image/png">
+	<meta name="description" content="To Do List" />
+</head>
+<body>
+	<!--Includes all content-->
+	<div id="container">
+		<!--header - the main logo and title-->
+		<div id="header">
+			<!--logo-->
+			<div class="logo"><img src="bin/images/logo2.png"></div>
+			<!--title-->
+			<div class="title">TODO-List</div>
+		</div>
+		
+		<!--TODO block-->
+		<div id="content">
+			<div class="form">
+				<form method="POST" action="/edit"> 
+					<p><span class="header-task">Date:</span>
+					<p><input type="date" name="date" id="date"> 
+					<p><span class="header-task">Your task is:</span>
+					<p><textarea name="task" maxlength="199">{{.}}</textarea>
+					<button type="submit" class="save-btn">Save</button>
+				</form>
+			</div>
+		</div>
+		
+		<!--footer-->
+		<div id="footer">
+			<p class="group">hcs-201701</p>
+			<p class="name">Hromov Roman</p>
+			<p class="year">2017</p>
+		</div>
+	</div>
+</body>
+
+<script>
+	Date.prototype.toDateInputValue = (function() {
+		var local = new Date(this);
+		local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+		return local.toJSON().slice(0,10);
+	});
+
+	document.getElementById('date').value = new Date().toDateInputValue();
+</script>
+
+</html>
