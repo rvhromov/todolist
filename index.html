@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Todo-List</title>
+	<link rel="stylesheet" type="text/css" href="bin/css/index.css">
+	<link rel="shortcut icon" href="bin/images/list.png" type="image/png">
+	<meta name="description" content="To Do List" />
+</head>
+<body>
+	<!--Includes all content-->
+	<div id="container">
+		<!--header - the main logo and title-->
+		<div id="header">
+			<!--logo-->
+			<div class="logo"><img src="bin/images/logo2.png"></div>
+			<!--title-->
+			<div class="title">TODO-List</div>
+		</div>
+		
+		<!--TODO block-->
+		<div id="content">
+			<!--add new task button-->
+			<form action="/edit" method="GET">
+				<p><button type="submit" class="new-task">Add new task</button>
+			</form>
+
+			<div class="text">
+			{{ range .}}
+				<p><span>{{.Task}}</span>
+				<p><span class="date">{{.Date}}</span>
+				
+				<form action="/update" method="POST" >
+					<input type="text" name="update" value="{{.Id}}" hidden> 
+					<button type="submit" class="update-btn">Update</button>
+				</form>
+				
+				<form action="/delete" method="POST" >
+					<input type="text" name="delete" value="{{.Id}}" hidden> 
+					<button type="submit" class="delete-btn">Delete</button>
+				</form>
+				
+				<hr>
+			{{ end }}
+			</div>	
+		</div>
+		
+		<!--footer-->
+		<div id="footer">
+			<p class="group">hcs-201701</p>
+			<p class="name">Hromov Roman</p>
+			<p class="year">2017</p>
+		</div>
+	</div>
+</body>
+</html>
