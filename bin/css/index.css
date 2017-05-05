@@ -1,0 +1,284 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain) */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*------------------------------------------------*/
+
+/*the main border*/
+#container{
+	width: 700px;
+	height: auto;
+	margin: 0 auto;
+	/*shadow*/
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+/*header - the main logo*/
+#header{
+	width: 700px;
+	height: 100px;
+	background: rgb(53, 167, 110);
+}
+
+/*title*/
+.title{
+	text-align: center;
+	padding-top: 20px;
+	font: 40px Arial;
+	font-weight: 900;
+	color: #ffffff;
+}
+
+.logo{
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 35px;
+}
+/*-------the end of the header's part-------*/
+
+/*content block*/
+#content{
+	width: 700px;
+	min-height:700px;
+	height: auto;
+	background-color: #ffffff;
+}
+
+.new-task{
+	position: absolute;
+	margin-left: 35px;
+	margin-top: 25px;
+	font-family: Arial;
+	outline: 0;
+	background: rgb(64,199,129);
+	width: 12%;
+	border: 0;
+	padding: 15px;
+	color: #FFFFFF;
+	font-size: 14px;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	cursor: pointer;
+	box-shadow: 0 -3px rgb(53,167,110) inset;
+	border-radius: 3px;
+}
+
+.new-task:hover { 
+	background: rgb(53, 167, 110); 
+}
+
+.new-task:active {
+	background: rgb(33,147,90);
+	box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+/*each block's header*/
+.text{
+	display: inline-block;
+	margin-top: 115px;
+	margin-left: 35px;
+	font: 16px Arial;
+	font-weight: bold;
+	color: #7B3993;
+	overflow-x:hidden;
+}
+
+.text p{
+	margin: 0px;
+	white-space: normal;
+}
+
+.date{
+	font: 14px Arial;
+	color: #777;
+}
+
+.update-btn{
+	position: absolute;
+	margin-top: 12px;
+	
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	outline: 0;
+	background: #fff;
+	border: 0;
+	padding: 7px;
+	color: rgb(53, 167, 110);
+}
+
+.update-btn:hover {  
+	cursor:pointer;
+	text-decoration: underline;
+}
+
+.update-btn:active {
+	cursor:pointer;
+	text-decoration: underline;
+	color: rgb(33,147,90)
+}
+
+.delete-btn{
+	margin-left: 75px;
+	margin-top: 12px;
+	
+	font-family: Arial;
+	outline: 0;
+	background: #fff;
+	border: 0;
+	padding: 7px;
+	color: rgb(53, 167, 110);
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.delete-btn:hover { 
+	cursor:pointer;
+	text-decoration: underline;
+}
+
+.delete-btn:active {
+	cursor:pointer;
+	text-decoration: underline;
+	color: rgb(33,147,90)
+}
+
+/*-----------------------------------------*/
+
+.form {
+	margin-top: 25px;
+	margin-left: 35px;
+	//text-align: center;
+}
+
+.header-task{
+	font: 20px Arial;
+	color: #7B3993;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+#date{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font: 15px Arial;
+	color: #7B3993;
+	width: 20%;
+}
+
+textarea{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font: 15px Arial;
+	color: #7B3993;
+	resize: none;
+	width: 94%; 
+    height: 200px;
+}
+
+.save-btn{
+	font-family: Arial;
+	outline: 0;
+	background: rgb(64,199,129);
+	width: 35%;
+	border: 0;
+	padding: 15px;
+	color: #FFFFFF;
+	font-size: 16px;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	cursor: pointer;
+	box-shadow: 0 -3px rgb(53,167,110) inset;
+	border-radius: 3px;
+	margin-left: 200px;
+}
+
+.save-btn:hover { 
+	background: rgb(53, 167, 110); 
+}
+
+.save-btn:active {
+	background: rgb(33,147,90);
+	box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+/*footer block*/
+#footer{
+	width: 700px;
+	height: 70px;
+	background: rgb(53, 167, 110);
+}
+
+/*footer's header*/
+.group{
+	padding-top: 7px;
+	font: 12px Arial;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: underline;
+	text-align: center;
+}
+
+/*studio*/
+.name{
+	padding-top: 7px;
+	text-align: center;
+	font: 12px Arial;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+/*country*/
+.year{
+	padding-top: 7px;
+	text-align: center;
+	font: 12px Arial;
+	font-weight: bold;
+	color: #ffffff;
+}
